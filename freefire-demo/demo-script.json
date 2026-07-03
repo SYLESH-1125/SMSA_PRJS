@@ -1,0 +1,14 @@
+[
+  {"action":"click","selector":"#startBtn","ms":500,"caption":"Click Start to launch the game."},
+  {"action":"press","key":"ArrowRight","times":6,"delayMs":150,"caption":"Move the player to the right using the right arrow key to approach targets."},
+  {"action":"press","key":"ArrowLeft","times":4,"delayMs":150,"caption":"Move left to collect items or dodge enemies."},
+  {"action":"press","key":"ArrowUp","times":1,"delayMs":200,"caption":"Jump to reach coins or avoid attacks."},
+  {"action":"press","key":"Space","times":4,"delayMs":180,"caption":"Shoot with Space to damage or destroy enemies."},
+  {"action":"press","key":"KeyK","times":1,"delayMs":200,"caption":"Spawn an enemy close by so we can demonstrate combat."},
+  {"action":"press","key":"Space","times":6,"delayMs":140,"caption":"Fire at the spawned enemy until it is defeated and score increases."},
+  {"action":"press","key":"KeyC","times":1,"delayMs":200,"caption":"Spawn a coin for collection demonstration."},
+  {"action":"press","key":"ArrowRight","times":6,"delayMs":150,"caption":"Move into the coin to collect it and increase score."},
+  {"action":"press","key":"KeyP","times":1,"delayMs":200,"caption":"Pause the game to show pause/resume functionality."},
+  {"action":"press","key":"KeyP","times":1,"delayMs":200,"caption":"Resume the game so we can continue the demo."},
+  {"action":"press","key":"KeyR","times":1,"delayMs":400,"caption":"Restart the game to show restart and reset of score and health."}
+]

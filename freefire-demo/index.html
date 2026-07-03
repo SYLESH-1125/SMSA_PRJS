@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FreeFire Demo (HTML/CSS/JS)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>FreeFire — Demo</h1>
+      <div class="controls">
+        <button id="startBtn">Start Game</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="restartBtn">Restart</button>
+      </div>
+    </header>
+
+    <main>
+      <canvas id="gameCanvas" width="800" height="480" tabindex="0"></canvas>
+      <aside class="info">
+        <h3>How to play</h3>
+        <ul>
+          <li>Move: ArrowLeft / ArrowRight</li>
+          <li>Jump: ArrowUp or W</li>
+          <li>Shoot: Space</li>
+          <li>Demo helpers: K (spawn enemy), C (spawn coin), P (pause), R (restart)</li>
+        </ul>
+        <div id="hud">
+          <div>Score: <span id="score">0</span></div>
+          <div>Health: <span id="health">100</span></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Demo game built with HTML5 canvas — no external assets.</small>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
