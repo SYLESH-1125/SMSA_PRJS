@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.pth
+
+# Model artifacts
+checkpoints/
+*.ckpt
+
+# VSCode
+.vscode/

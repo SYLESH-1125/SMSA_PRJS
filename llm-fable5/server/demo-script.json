@@ -1,0 +1,6 @@
+[
+  { "action": "type", "selector": "#prompt", "text": "A short heroic fable about a village and a wise tree.", "caption": "Type a prompt to ask the model to write a short heroic fable — shows the app accepts natural-language prompts." },
+  { "action": "type", "selector": "#maxlen", "text": "128", "caption": "Set the max token length to control how long the model's output can be — important for cost and immediacy." },
+  { "action": "click", "selector": "#generateBtn", "caption": "Click Generate to send the prompt to the server and run the model — demonstrates inference flow." },
+  { "action": "wait", "selector": "#output", "caption": "Wait for the output area to be populated with model text — confirms successful generation." }
+]

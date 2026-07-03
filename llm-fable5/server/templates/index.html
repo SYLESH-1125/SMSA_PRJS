@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM Fable-5 (scaffold)</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LLM Fable-5 — Demo UI</h1>
+    <label for="prompt">Prompt</label>
+    <textarea id="prompt" placeholder="Write a short fantasy story about a talking tree..."></textarea>
+    <label for="maxlen">Max tokens</label>
+    <input id="maxlen" type="number" value="128" min="32" max="1024" />
+    <button id="generateBtn">Generate</button>
+    <h2>Output</h2>
+    <pre id="output" class="output"></pre>
+  </div>
+
+  <script>
+    const btn = document.getElementById('generateBtn');
+    const promptEl = document.getElementById('prompt');
+    const outEl = document.getElementById('output');
+    const maxlen = document.getElementById('maxlen');
+
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      outEl.textContent = 'Generating...';
+      try {
+        const form = new FormData();
+        form.append('prompt', promptEl.value);
+        form.append('max_length', maxlen.value);
+        const res = await fetch('/generate', { method: 'POST', body: form });
+        const data = await res.json();
+        if (data.error) {
+          outEl.textContent = 'Error: ' + data.error;
+        } else {
+          outEl.textContent = data.outputs.join('\n\n---\n\n');
+        }
+      } catch (e) {
+        outEl.textContent = 'Request failed: ' + e;
+      }
+      btn.disabled = false;
+    });
+  </script>
+</body>
+</html>
