@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Snake Game 🐍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 Cute Snake</h1>
+            <p>A light & playful take on a classic</p>
+        </header>
+
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <div class="controls">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">High Score:</span>
+                    <span class="value" id="highScore">0</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="startBtn" class="btn btn-primary">Start Game</button>
+                <button id="pauseBtn" class="btn btn-secondary">Pause</button>
+                <button id="resetBtn" class="btn btn-tertiary">Reset</button>
+            </div>
+
+            <div class="instructions">
+                <h3>How to Play</h3>
+                <ul>
+                    <li>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move</li>
+                    <li>Eat the food 🍎 to grow</li>
+                    <li>Don't hit the walls or yourself!</li>
+                    <li>Press <strong>Space</strong> to pause/resume</li>
+                </ul>
+            </div>
+
+            <div class="game-status" id="gameStatus">Ready to play!</div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

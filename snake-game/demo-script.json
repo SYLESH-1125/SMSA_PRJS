@@ -1,0 +1,64 @@
+[
+  {
+    "action": "wait",
+    "selector": "#gameCanvas",
+    "caption": "The cute snake game loads with a light, minimalist design using pastel colors and soft shadows."
+  },
+  {
+    "action": "click",
+    "selector": "#startBtn",
+    "caption": "Click 'Start Game' to begin playing. The snake is now alive and ready to move."
+  },
+  {
+    "action": "click",
+    "selector": "#startBtn",
+    "caption": "The game is now running. Watch as the snake automatically moves forward on the grid."
+  },
+  {
+    "action": "wait",
+    "selector": "#gameCanvas",
+    "caption": "The snake has a cute face with animated eyes. The food appears as a peach-colored apple with a shine effect."
+  },
+  {
+    "action": "type",
+    "selector": "body",
+    "text": "ArrowRight",
+    "caption": "Press the right arrow key to steer the snake toward the food. The game responds smoothly to keyboard input."
+  },
+  {
+    "action": "wait",
+    "selector": "#score",
+    "caption": "When the snake eats food, the score increases by 10 points and the snake grows longer."
+  },
+  {
+    "action": "type",
+    "selector": "body",
+    "text": "ArrowUp",
+    "caption": "Use arrow keys or WASD to control the snake in all directions. The game prevents 180-degree turns for safety."
+  },
+  {
+    "action": "wait",
+    "selector": "#gameCanvas",
+    "caption": "The mint green body segments show a subtle gradient for depth. Each segment is rounded for a soft, cute appearance."
+  },
+  {
+    "action": "click",
+    "selector": "#pauseBtn",
+    "caption": "Click 'Pause' to pause the game. You can then click 'Resume' to continue playing without resetting."
+  },
+  {
+    "action": "click",
+    "selector": "#pauseBtn",
+    "caption": "The game resumes from where you paused. The high score is saved in browser storage for persistence."
+  },
+  {
+    "action": "click",
+    "selector": "#resetBtn",
+    "caption": "Click 'Reset' to start a fresh game. Your high score is preserved even after reset."
+  },
+  {
+    "action": "wait",
+    "selector": "#gameStatus",
+    "caption": "The status bar shows game state: 'Ready to play', '▶ Playing...', '⏸ Paused', or 'Game Over' with final score."
+  }
+]
