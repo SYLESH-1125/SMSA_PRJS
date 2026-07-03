@@ -1,0 +1,40 @@
+﻿[
+    {
+        "caption":  "Welcome to ShopLite - a demo e-commerce app with 20 products.",
+        "action":  "wait",
+        "ms":  1000
+    },
+    {
+        "selector":  "#search-input",
+        "caption":  "Live search - results filter as you type.",
+        "action":  "type",
+        "text":  "shirt"
+    },
+    {
+        "ms":  1500,
+        "action":  "wait"
+    },
+    {
+        "selector":  ".chip",
+        "caption":  "Category chips filter the catalog in one click.",
+        "action":  "click"
+    },
+    {
+        "caption":  "Browsing the product catalog...",
+        "action":  "scroll"
+    },
+    {
+        "selector":  ".add-btn",
+        "caption":  "Add to cart - the cart badge updates instantly.",
+        "action":  "click"
+    },
+    {
+        "selector":  "#cart-btn",
+        "caption":  "The cart drawer: quantities, totals and checkout.",
+        "action":  "click"
+    },
+    {
+        "ms":  2000,
+        "action":  "wait"
+    }
+]
