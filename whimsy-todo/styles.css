@@ -1,0 +1,220 @@
+/* ── Whimsy To-Do · minimalist + whimsical ─────────────────────────── */
+
+:root {
+  --bg: #fdf6ec;          /* warm paper */
+  --ink: #4a4458;         /* soft plum ink */
+  --muted: #a89fb8;
+  --accent: #f4a9c4;      /* petal pink */
+  --accent-2: #a8d8c9;    /* mint */
+  --card: #fffdf9;
+  --shadow: rgba(74, 68, 88, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  background-image: radial-gradient(var(--accent-2) 0.8px, transparent 0.8px);
+  background-size: 26px 26px;
+  font-family: "Comic Sans MS", "Segoe Print", "Chalkboard SE", cursive, sans-serif;
+  color: var(--ink);
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+/* ── floating doodles ──────────────────────────────────────────────── */
+.doodles { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.doodle {
+  position: absolute;
+  font-size: 1.6rem;
+  color: var(--accent);
+  opacity: 0.5;
+  animation: floaty 7s ease-in-out infinite;
+}
+.d1 { top: 12%; left: 8%; }
+.d2 { top: 20%; right: 10%; color: var(--accent-2); animation-delay: 1s; }
+.d3 { bottom: 22%; left: 12%; animation-delay: 2s; }
+.d4 { bottom: 12%; right: 14%; color: var(--accent-2); animation-delay: 3s; }
+.d5 { top: 55%; left: 4%; animation-delay: 1.5s; }
+.d6 { top: 60%; right: 5%; animation-delay: 2.5s; }
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50%      { transform: translateY(-14px) rotate(6deg); }
+}
+
+/* ── card ──────────────────────────────────────────────────────────── */
+.card {
+  position: relative;
+  z-index: 1;
+  width: min(430px, 100%);
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 22px 26px 20px 24px; /* slightly wonky, hand-drawn feel */
+  box-shadow: 6px 8px 0 var(--shadow);
+  padding: 2rem 1.75rem 1.5rem;
+  transform: rotate(-0.6deg);
+}
+
+.card-header { text-align: center; margin-bottom: 1.5rem; }
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+
+.sparkle { display: inline-block; animation: floaty 3s ease-in-out infinite; }
+
+.tagline {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* ── form ──────────────────────────────────────────────────────────── */
+.todo-form { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
+
+.todo-form input {
+  flex: 1;
+  font: inherit;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed var(--muted);
+  padding: 0.5rem 0.25rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.todo-form input:focus { border-bottom-color: var(--accent); }
+.todo-form input::placeholder { color: var(--muted); font-style: italic; }
+
+.todo-form button {
+  font: inherit;
+  font-size: 1.3rem;
+  line-height: 1;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px solid var(--ink);
+  border-radius: 50% 45% 50% 48%;
+  background: var(--accent);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 2px 3px 0 var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.todo-form button:hover { transform: rotate(8deg) scale(1.08); }
+.todo-form button:active { transform: scale(0.95); box-shadow: 1px 1px 0 var(--shadow); }
+
+/* ── list ──────────────────────────────────────────────────────────── */
+.todo-list { list-style: none; display: grid; gap: 0.4rem; }
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.5rem;
+  border-radius: 12px;
+  animation: pop-in 0.25s ease-out;
+  transition: background 0.2s;
+}
+.todo-list li:hover { background: rgba(168, 216, 201, 0.18); }
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* hand-drawn checkbox */
+.todo-list input[type="checkbox"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  border: 2px solid var(--ink);
+  border-radius: 40% 55% 45% 60%;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s, transform 0.15s;
+}
+.todo-list input[type="checkbox"]:hover { transform: rotate(-6deg) scale(1.1); }
+.todo-list input[type="checkbox"]:checked {
+  background: var(--accent-2);
+}
+.todo-list input[type="checkbox"]:checked::after {
+  content: "✓";
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+.todo-list .label {
+  flex: 1;
+  word-break: break-word;
+  position: relative;
+  transition: color 0.25s;
+}
+
+li.done .label { color: var(--muted); }
+li.done .label::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 55%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: rotate(-1deg);
+  animation: strike 0.3s ease-out;
+}
+@keyframes strike { from { right: 100%; } to { right: 0; } }
+
+.todo-list .remove {
+  font: inherit;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s, color 0.15s;
+}
+.todo-list li:hover .remove { opacity: 1; }
+.todo-list .remove:hover { color: var(--accent); transform: rotate(90deg) scale(1.2); }
+
+/* ── empty state & footer ──────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  padding: 1.25rem 0;
+}
+.empty-state.hidden { display: none; }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  padding-top: 0.9rem;
+  border-top: 2px dashed var(--muted);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.clear-done {
+  font: inherit;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.clear-done:hover { color: var(--accent); text-decoration: underline wavy; }
+
+@media (prefers-reduced-motion: reduce) {
+  .doodle, .sparkle, .todo-list li { animation: none; }
+}

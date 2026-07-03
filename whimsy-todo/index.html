@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whimsy To-Do ✿</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- floating background doodles -->
+  <div class="doodles" aria-hidden="true">
+    <span class="doodle d1">✿</span>
+    <span class="doodle d2">☁</span>
+    <span class="doodle d3">✦</span>
+    <span class="doodle d4">❀</span>
+    <span class="doodle d5">☾</span>
+    <span class="doodle d6">✧</span>
+  </div>
+
+  <main class="card">
+    <header class="card-header">
+      <h1>to-dos <span class="sparkle">✨</span></h1>
+      <p class="tagline">little tasks, gently done</p>
+    </header>
+
+    <form id="todo-form" class="todo-form" autocomplete="off">
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="what shall we do today?"
+        maxlength="80"
+        aria-label="New task"
+      />
+      <button type="submit" aria-label="Add task">+</button>
+    </form>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <p id="empty-state" class="empty-state">nothing here yet — how dreamy ☁</p>
+
+    <footer class="card-footer">
+      <span id="count">0 tasks</span>
+      <button id="clear-done" class="clear-done" type="button">sweep the done ones ⌫</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
