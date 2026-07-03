@@ -1,0 +1,96 @@
+[
+  {
+    "action": "wait",
+    "ms": 500,
+    "caption": "Welcome to Tetris! Here's a quick demo of the game."
+  },
+  {
+    "action": "click",
+    "selector": "#startBtn",
+    "caption": "Let's start a new game by clicking the Start Game button."
+  },
+  {
+    "action": "wait",
+    "ms": 800,
+    "caption": "Great! The game has begun. The first piece appears at the top of the board."
+  },
+  {
+    "action": "press",
+    "key": "ArrowLeft",
+    "times": 3,
+    "delayMs": 200,
+    "caption": "We move the piece to the left using the left arrow key three times."
+  },
+  {
+    "action": "wait",
+    "ms": 500,
+    "caption": "The piece moves horizontally across the board."
+  },
+  {
+    "action": "press",
+    "key": "Space",
+    "times": 1,
+    "delayMs": 100,
+    "caption": "Now we rotate the piece using the Space bar to change its orientation."
+  },
+  {
+    "action": "wait",
+    "ms": 500,
+    "caption": "The piece rotates successfully!"
+  },
+  {
+    "action": "press",
+    "key": "ArrowRight",
+    "times": 2,
+    "delayMs": 200,
+    "caption": "We move it right to position it where we want it."
+  },
+  {
+    "action": "wait",
+    "ms": 1200,
+    "caption": "The piece continues falling down automatically toward the bottom."
+  },
+  {
+    "action": "press",
+    "key": "ArrowDown",
+    "times": 5,
+    "delayMs": 150,
+    "caption": "We speed up the descent using the down arrow key to drop it faster."
+  },
+  {
+    "action": "wait",
+    "ms": 800,
+    "caption": "The piece lands and places itself on the board. A new piece spawns automatically."
+  },
+  {
+    "action": "press",
+    "key": "ArrowRight",
+    "times": 6,
+    "delayMs": 200,
+    "caption": "We move this new piece to the right side of the board."
+  },
+  {
+    "action": "press",
+    "key": "Space",
+    "times": 2,
+    "delayMs": 200,
+    "caption": "We rotate it a couple times to find the best fit."
+  },
+  {
+    "action": "wait",
+    "ms": 2000,
+    "caption": "As we continue playing, pieces stack up. Watch the score increase when we complete lines!"
+  },
+  {
+    "action": "press",
+    "key": "ArrowDown",
+    "times": 8,
+    "delayMs": 100,
+    "caption": "We continue dropping pieces rapidly to fill rows and clear them for points."
+  },
+  {
+    "action": "wait",
+    "ms": 1500,
+    "caption": "Complete rows are cleared automatically and your score increases. The level rises as you clear more lines. Try to keep playing as long as possible!"
+  }
+]
