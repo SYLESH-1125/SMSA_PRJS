@@ -1,64 +1,15 @@
 [
-  {
-    "action": "wait",
-    "selector": "#gameCanvas",
-    "caption": "The cute snake game loads with a light, minimalist design using pastel colors and soft shadows."
-  },
-  {
-    "action": "click",
-    "selector": "#startBtn",
-    "caption": "Click 'Start Game' to begin playing. The snake is now alive and ready to move."
-  },
-  {
-    "action": "click",
-    "selector": "#startBtn",
-    "caption": "The game is now running. Watch as the snake automatically moves forward on the grid."
-  },
-  {
-    "action": "wait",
-    "selector": "#gameCanvas",
-    "caption": "The snake has a cute face with animated eyes. The food appears as a peach-colored apple with a shine effect."
-  },
-  {
-    "action": "type",
-    "selector": "body",
-    "text": "ArrowRight",
-    "caption": "Press the right arrow key to steer the snake toward the food. The game responds smoothly to keyboard input."
-  },
-  {
-    "action": "wait",
-    "selector": "#score",
-    "caption": "When the snake eats food, the score increases by 10 points and the snake grows longer."
-  },
-  {
-    "action": "type",
-    "selector": "body",
-    "text": "ArrowUp",
-    "caption": "Use arrow keys or WASD to control the snake in all directions. The game prevents 180-degree turns for safety."
-  },
-  {
-    "action": "wait",
-    "selector": "#gameCanvas",
-    "caption": "The mint green body segments show a subtle gradient for depth. Each segment is rounded for a soft, cute appearance."
-  },
-  {
-    "action": "click",
-    "selector": "#pauseBtn",
-    "caption": "Click 'Pause' to pause the game. You can then click 'Resume' to continue playing without resetting."
-  },
-  {
-    "action": "click",
-    "selector": "#pauseBtn",
-    "caption": "The game resumes from where you paused. The high score is saved in browser storage for persistence."
-  },
-  {
-    "action": "click",
-    "selector": "#resetBtn",
-    "caption": "Click 'Reset' to start a fresh game. Your high score is preserved even after reset."
-  },
-  {
-    "action": "wait",
-    "selector": "#gameStatus",
-    "caption": "The status bar shows game state: 'Ready to play', '▶ Playing...', '⏸ Paused', or 'Game Over' with final score."
-  }
+  { "action": "wait", "ms": 1200, "caption": "Here's the snake game, with a soft pastel look - mint greens, warm peach, and rounded corners for that cute minimalist feel." },
+  { "action": "click", "selector": "#startBtn", "caption": "Let's click Start Game and bring the snake to life." },
+  { "action": "press", "key": "ArrowRight", "times": 5, "delayMs": 320, "caption": "Steering with the arrow keys - watch the snake glide across the board hunting for the peach colored apple." },
+  { "action": "press", "key": "ArrowDown", "times": 4, "delayMs": 320 },
+  { "action": "press", "key": "ArrowLeft", "times": 4, "delayMs": 320, "caption": "Full four-directional control - and the game smartly blocks impossible one-eighty turns." },
+  { "action": "press", "key": "ArrowUp", "times": 3, "delayMs": 320 },
+  { "action": "press", "key": "ArrowRight", "times": 6, "delayMs": 300, "caption": "Every apple eaten grows the snake longer and adds ten points to the score up top." },
+  { "action": "click", "selector": "#pauseBtn", "caption": "Need a break? One click pauses everything exactly where it is." },
+  { "action": "wait", "ms": 900 },
+  { "action": "click", "selector": "#pauseBtn", "caption": "And resume continues right from the same spot." },
+  { "action": "press", "key": "ArrowDown", "times": 4, "delayMs": 300 },
+  { "action": "click", "selector": "#resetBtn", "caption": "Reset starts a fresh run - but your high score stays saved in the browser, even after closing the page." },
+  { "action": "wait", "ms": 1000, "caption": "Clean code, four small files, no dependencies - just open index dot html and play." }
 ]

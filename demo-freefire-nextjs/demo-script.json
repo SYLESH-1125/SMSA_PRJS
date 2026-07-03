@@ -1,0 +1,14 @@
+[
+  {"action":"wait","ms":800,"caption":"Starting the Demo Free Fire web app built with Next.js and Supabase."},
+  {"action":"click","selector":"button:contains('Reset Score')","caption":"First, focus the game canvas by clicking inside it."},
+  {"action":"press","key":"ArrowRight","times":6,"delayMs":120,"caption":"Move the player to the right to show mobility."},
+  {"action":"press","key":"ArrowLeft","times":4,"delayMs":120,"caption":"Move left to demonstrate responsive controls."},
+  {"action":"press","key":"Space","times":6,"delayMs":200,"caption":"Fire bullets with the Space key to rack up points."},
+  {"action":"wait","ms":600,"caption":"Watch the score increase as shots and events register."},
+  {"action":"press","key":"ArrowRight","times":3,"delayMs":120,"caption":"Combine movement and shooting for pro-level strafing."},
+  {"action":"wait","ms":400,"caption":"Show the current score on the HUD and beside the controls."},
+  {"action":"click","selector":"button:contains('Save Score')","caption":"Save the current score to Supabase (if configured)."},
+  {"action":"wait","ms":800,"caption":"Open the leaderboard to verify the saved score appears at the top."},
+  {"action":"click","selector":"h3:contains('Leaderboard')","caption":"Inspect the leaderboard panel to show persisted scores."},
+  {"action":"wait","ms":600,"caption":"Wrap up: explain recording this gameplay and uploading to YouTube as the next step."}
+]
