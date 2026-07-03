@@ -1,0 +1,62 @@
+[
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "This is Mock GTA: Terminal City — a complete top-down open-world game in pure HTML, CSS and JavaScript. Procedural city, traffic, pedestrians, police, missions and synth audio, with zero dependencies, so it runs instantly in any browser."
+  },
+  {
+    "action": "click",
+    "selector": "#btn-demo",
+    "caption": "One click starts the PRO DEMO: a built-in autopilot that genuinely plays the game at pro level. This matters because you can record flawless gameplay footage without a human driver — the AI does the stunts."
+  },
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "The AI walks to a Cheetah sports car and pulls off — and the bottom-left FEELINGS feed starts narrating the driver's emotions in realtime ('This thing purrs. Heart rate: rising.'). Every reaction is timestamped and recorded, like a live let's-play commentary."
+  },
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "Watch the cornering: this is real top-down car physics with lateral grip and handbrake slides. The autopilot deliberately kicks the tail out through turns, leaving skid marks — that weighty drift feel is what separates a game from a tech demo."
+  },
+  {
+    "action": "click",
+    "selector": "#btn-cam",
+    "caption": "The cinematic camera toggles letterbox bars and a lazy chase-cam that frames the action like a trailer — perfect for recordings and screenshots of the run."
+  },
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "Now the pro gets cocky: it smashes a fire hydrant and the WANTED system reacts live — stars light up top-left, sirens wail, and squad cars pathfind through the road grid to intercept. Adrenaline hits the feelings feed instantly."
+  },
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "Pro-level evasion: the AI threads the city at speed until the heat dies and the stars drain away. The chase-and-escape loop proves both sides of the police AI work — pursuit and giving up."
+  },
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "Next it drives into the glowing mission marker and picks up PIZZA RUSH — three timed deliveries guided by the yellow blip on the minimap. Missions give the sandbox goals, timers and pressure."
+  },
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "MISSION PASSED — the jingle plays, cash counts up in the HUD and the driver celebrates in the feed. Money, rewards and the 'one more job' loop are what make it feel like a real GTA."
+  },
+  {
+    "action": "click",
+    "selector": "#btn-replay",
+    "caption": "Here is the star feature: the SESSION RECORDER. Every emotion from the run — drifts, near-misses, stars, paydays — was captured with timestamps. It is a shareable 'realtime feelings' log of the gameplay, exportable as JSON."
+  },
+  {
+    "action": "click",
+    "selector": "#btn-replay-close",
+    "caption": "Close the recorder and the run keeps going — the blinking REC badge under the minimap shows it never stops capturing the session."
+  },
+  {
+    "action": "wait",
+    "selector": "body",
+    "caption": "Day fades to night with working streetlights and headlights while the AI keeps cruising. Open world, drift driving, police heat, missions, minimap, day-night lighting and a pro autopilot — all in plain HTML, CSS and JS."
+  }
+]

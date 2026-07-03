@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOCK GTA — Terminal City</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="vignette"></div>
+<div id="lb-top" class="letterbox"></div>
+<div id="lb-bottom" class="letterbox"></div>
+
+<div id="hud" class="hidden">
+  <div id="hud-topleft">
+    <div id="hud-health"><div id="hud-health-fill"></div></div>
+    <div id="hud-money">$250</div>
+    <div id="hud-stars">
+      <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+    </div>
+  </div>
+
+  <div id="minimap-wrap">
+    <canvas id="minimap" width="192" height="192"></canvas>
+    <div id="rec-indicator"><span class="dot"></span>REC <span id="rec-time">00:00</span></div>
+  </div>
+
+  <div id="feed"></div>
+
+  <div id="mission-panel" class="hidden">
+    <div id="mission-title"></div>
+    <div id="mission-obj"></div>
+    <div id="mission-timer"></div>
+  </div>
+
+  <div id="toast" class="hidden"></div>
+  <div id="bigtext" class="hidden"></div>
+
+  <div id="speedo" class="hidden"><span id="speedo-val">0</span><span class="unit">km/h</span></div>
+
+  <div id="controls-bar">
+    <button id="btn-cam"    title="Cinematic camera (V)">🎥</button>
+    <button id="btn-horn"   title="Horn (H)">📯</button>
+    <button id="btn-mute"   title="Mute (M)">🔊</button>
+    <button id="btn-replay" title="Session recorder — realtime feelings log">📼</button>
+    <button id="btn-pause"  title="Pause (Esc)">⏸</button>
+  </div>
+
+  <div id="demo-banner" class="hidden">
+    <span class="live">●</span><span id="demo-banner-text">PRO DEMO — autopilot is playing</span>
+    <button id="btn-skip-demo">TAKE CONTROL</button>
+  </div>
+</div>
+
+<div id="overlay-start" class="overlay">
+  <h1>MOCK <span>GTA</span></h1>
+  <h2>TERMINAL CITY</h2>
+  <p class="tag">Open world &bull; drift physics &bull; traffic &amp; peds &bull; police heat &bull; missions &bull; realtime feelings recorder</p>
+  <div class="menu-btns">
+    <button id="btn-start">▶ &nbsp;PLAY</button>
+    <button id="btn-demo">★ &nbsp;WATCH PRO DEMO</button>
+  </div>
+  <div class="keys">
+    <div><b>WASD / ⬆⬇⬅➡</b> move &amp; drive</div><div><b>E</b> enter / exit car</div>
+    <div><b>SPACE</b> handbrake (drift!)</div><div><b>CLICK</b> shoot</div>
+    <div><b>H</b> horn</div><div><b>V</b> cinematic cam</div>
+    <div><b>M</b> mute</div><div><b>ESC</b> pause</div>
+  </div>
+  <p class="foot">100% HTML / CSS / JS &bull; no assets &bull; no dependencies &bull; synth audio</p>
+</div>
+
+<div id="overlay-pause" class="overlay hidden">
+  <h2>PAUSED</h2>
+  <div class="menu-btns">
+    <button id="btn-resume">RESUME</button>
+    <button id="btn-restart">RESTART CITY</button>
+    <button id="btn-demo2">WATCH PRO DEMO</button>
+  </div>
+</div>
+
+<div id="replay-panel">
+  <div class="rp-head">
+    <span class="rp-title">📼 SESSION RECORDER</span>
+    <span class="rp-sub">realtime feelings log</span>
+    <button id="btn-save-replay">⭳ JSON</button>
+    <button id="btn-replay-close">✕</button>
+  </div>
+  <div id="replay-list"></div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/world.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/systems.js"></script>
+<script src="js/autopilot.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
